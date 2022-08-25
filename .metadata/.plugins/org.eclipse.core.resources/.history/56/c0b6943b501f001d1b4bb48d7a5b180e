@@ -1,0 +1,18 @@
+package primer;
+
+public class PruebaEncapsulamiento {
+	public static void main(String[] args) {
+		Cuenta cuenta = new Cuenta();
+		
+		Cliente cliente = new Cliente();
+		
+		cliente.setNombre("Diego");
+		cliente.setDocumento("23555666");
+		cliente.setTelefono("23099988@");
+		
+		System.out.println(cliente.getNombre());
+		
+		
+	}
+
+}

@@ -1,0 +1,118 @@
+package gui;
+import java.awt.EventQueue;
+import java.awt.event.*;
+import java.nio.channels.SelectableChannel;
+
+import javax.swing.*;
+
+
+public class miWindow {
+
+	private JFrame frmMiWindow;
+	private JTextField textFarenheit;
+	private JTextField textCelsius;
+	private JComboBox<String> comboBoxTemp;
+	
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					miWindow window = new miWindow();
+					window.frmMiWindow.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public miWindow() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmMiWindow = new JFrame();
+		frmMiWindow.setTitle("Mi Window");
+		frmMiWindow.setBounds(100, 100, 526, 249);
+		frmMiWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmMiWindow.getContentPane().setLayout(null);
+		
+		JLabel lblFarenheit = new JLabel("Farenheit");
+		lblFarenheit.setBounds(10, 54, 77, 14);
+		frmMiWindow.getContentPane().add(lblFarenheit);
+		
+		textFarenheit = new JTextField();
+		textFarenheit.setBounds(208, 30, 96, 20);
+		frmMiWindow.getContentPane().add(textFarenheit);
+		textFarenheit.setColumns(10);
+		
+		
+		JButton btnconvert = new JButton("Convert");
+		btnconvert.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				convertButtonClicked();
+			}
+		});
+		btnconvert.setBounds(218, 61, 89, 23);
+		frmMiWindow.getContentPane().add(btnconvert);
+		
+		textCelsius = new JTextField();
+		textCelsius.setEditable(false);
+		textCelsius.setBounds(325, 30, 77, 20);
+		frmMiWindow.getContentPane().add(textCelsius);
+		textCelsius.setColumns(10);
+		
+		JLabel lblCelcius = new JLabel("Celcius");
+		lblCelcius.setBounds(412, 33, 49, 14);
+		frmMiWindow.getContentPane().add(lblCelcius);
+		
+		JComboBox<String> comboBoxTemp = new JComboBox<String>();
+		comboBoxTemp.setBounds(43, 29, 155, 23);
+		frmMiWindow.getContentPane().add(comboBoxTemp);
+		comboBoxTemp.addItem("Farenheit a Celcius");
+		comboBoxTemp.addItem("Celcius a Farenheit");
+		comboBoxTemp.addItem("Kelvin a Ferenheit");
+	}
+
+	
+    public String itemStateChanged(ItemEvent e) {
+        if (e.getSource()==comboBoxTemp) {
+            String seleccionado=(String)comboBoxTemp.getSelectedItem();
+           	return seleccionado;
+           	}
+		return null;
+    }
+	
+private void convertButtonClicked(ItemEvent e) {
+    double farenheit =0;
+	
+   
+	if("Farenheit a Celcius"== itemStateChanged(e)) {
+    	try {
+    		farenheit = Double.parseDouble(textFarenheit.getText());
+    	}catch(NumberFormatException e1) {
+    		JOptionPane.showMessageDialog(frmMiWindow, "Ingrese Solo Numeros");		
+    		textCelsius.setText("0");
+    		return;
+    	}
+    	double celsius = CalcularTemperatura.convertiFarenheitACelcius(farenheit);
+    	textCelsius.setText(Double.toString(celsius));	
+    	
+    }
+    
+
+}
+
+	
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.security.DomainCombiner"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="javax.sound.midi.Soundbank"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="primer.Cuenta"/>
+    <fullyQualifiedTypeName name="primer.Cliente"/>
+    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="segundo.ControlBonificacion"/>
+    <fullyQualifiedTypeName name="segundo.CuentaAhorro"/>
+    <fullyQualifiedTypeName name="segundo.CuentaCorriente"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="java.awt.event.ItemEvent"/>
+    <fullyQualifiedTypeName name="java.nio.channels.SelectableChannel"/>
+    <fullyQualifiedTypeName name="gui.miWindow"/>
+    <fullyQualifiedTypeName name="java.awt.EventQueue"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="ConvertMonedas.function"/>
+    <fullyQualifiedTypeName name="conversorTemperatura.functionTemperatura"/>
+</qualifiedTypeNameHistroy>

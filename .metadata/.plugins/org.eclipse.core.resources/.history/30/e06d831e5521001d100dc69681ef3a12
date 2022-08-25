@@ -1,0 +1,10 @@
+
+public class TestFuncionario {
+	public static void main(String[] args) {
+		Funcionario diego = new Funcionario();
+		diego.setDocumento("2234567878");
+		diego.getSalario(2000);
+		System.out.println(diego.getSalario());
+	}
+
+}

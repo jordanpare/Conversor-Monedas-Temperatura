@@ -1,0 +1,19 @@
+package segundo;
+
+public class Gerente extends Funcionario{
+	
+	private String clave;
+	
+	public void setClave(String clave) {
+		this.clave = clave;
+	}
+	
+	public double getBonificacion () {
+		return super.getSalario();
+	}
+	
+	public boolean iniciarSecion(String clave) {
+		return clave == "Alura123";
+	}
+
+}

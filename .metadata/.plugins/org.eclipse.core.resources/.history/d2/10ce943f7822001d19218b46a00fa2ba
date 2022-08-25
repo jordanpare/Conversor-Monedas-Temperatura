@@ -1,0 +1,18 @@
+package segundo;
+
+public class TestCuenta {
+	
+	public static void main(String[] args) {
+		
+		CuentaCorriente cc = new CuentaCorriente(4, 5);
+		CuentaAhorro ca = new CuentaAhorro(8,6);
+		
+		cc.depositar(3000);
+		cc.tranfiere(2000, ca);
+		
+		System.out.println(cc.getSaldo());
+		System.out.println(ca.getSaldo());
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package gui;
+
+public class CalcularTemperatura {
+	
+	public static double convertiFarenheitACelsius(double farenheit) {
+		
+		return (farenheit - 32)* 5.0/9;
+		
+	}
+
+}

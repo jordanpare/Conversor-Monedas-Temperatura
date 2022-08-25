@@ -1,0 +1,6 @@
+package segundo;
+
+public class Contador extends Funcionario {
+	
+
+}

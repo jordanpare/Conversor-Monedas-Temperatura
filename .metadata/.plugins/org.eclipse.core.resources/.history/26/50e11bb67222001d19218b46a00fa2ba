@@ -1,0 +1,15 @@
+package segundo;
+
+public class TestCuenta {
+	
+	public static void main(String[] args) {
+		
+		CuentaCorriente cc = new CuentaCorriente(9,9);
+		CuentaAhorro ca = new CuentaAhorro(8,8);
+		
+		cc.depositar(2000);
+		ca.depositar(3000);
+		
+	}
+
+}
